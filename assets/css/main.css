@@ -1238,7 +1238,7 @@ section,
   height: 100%;
 }
 .services{
-  background-image: url(/assets/img/BackGround/service.jpg);
+  background-image: url('../assets/img/background/service.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
