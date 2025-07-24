@@ -532,7 +532,7 @@ h6 {
   position: relative;
 }
 .footer{
-  background-image: url(/assets/img/BackGround/Footer.jpg)
+  background-image: url(/assets/img/BackGround/footer.jpg)
 }
 
 .footer .footer-newsletter {
@@ -1238,7 +1238,7 @@ section,
   height: 100%;
 }
 .services{
-  background-image: url(/assets/img/BackGround/Service.jpg);
+  background-image: url(/assets/img/BackGround/service.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
