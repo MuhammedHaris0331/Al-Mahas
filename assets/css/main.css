@@ -532,7 +532,7 @@ h6 {
   position: relative;
 }
 .footer{
-  background-color: black;
+  background-image: url(/assets/img/BackGround/Footer.jpg)
 }
 
 .footer .footer-newsletter {
@@ -876,7 +876,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  background-image: url(/assets/img/BackGround/Hero.jpg);
+  background-color: black;
   background-attachment: fixed;
   background-size: 100%;
   filter: brightness(85%);
