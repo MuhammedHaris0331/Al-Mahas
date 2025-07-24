@@ -625,7 +625,6 @@ h6 {
 }
 .sitename-1{
   display: flex;
-  border-radius: 100px;
   height: 50px;
   background-color: white;
 }
