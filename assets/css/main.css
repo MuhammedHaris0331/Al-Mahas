@@ -876,7 +876,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  background-image: url(../img/background/hero.jpg);
+  background-image: url('../img/background/hero.jpg');
   background-attachment: fixed;
   background-size: 100%;
   filter: brightness(85%);
