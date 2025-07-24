@@ -532,10 +532,7 @@ h6 {
   position: relative;
 }
 .footer{
-  background-image: url(/assets/img/BackGround/hero.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: black;
 }
 
 .footer .footer-newsletter {
