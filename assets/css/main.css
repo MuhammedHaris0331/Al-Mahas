@@ -519,8 +519,8 @@ h6 {
   padding-bottom: 50px;
   position: relative;
 }
-.footer{
-  background-image: url('../assets/img/background/footer.jpg');
+.footer{  
+  background-image: url('../img/background/footer.jpg');
 }
 
 .footer .footer-newsletter {
