@@ -1,0 +1,162 @@
+/* ================================
+   ABOUT PAGE WRAPPER
+================================ */
+.about-page {
+    padding-top: 120px;
+    background: #f9fafb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* ================================
+     HERO SECTION
+  ================================ */
+  .about-hero {
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #ffffff;
+    padding: 120px 20px 100px;
+    text-align: center;
+  }
+  
+  .about-hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+  
+  .about-hero p {
+    font-size: 18px;
+    color: #e5e7eb;
+    max-width: 720px;
+    margin: auto;
+    line-height: 1.6;
+  }
+  
+  /* ================================
+     CONTENT SECTION
+  ================================ */
+  .about-content {
+    padding: 70px 20px;
+  }
+  
+  .about-container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* ================================
+     INFO CARDS
+  ================================ */
+  .about-block {
+    background: #ffffff;
+    padding: 36px;
+    border-radius: 18px;
+    margin-bottom: 36px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
+  }
+  
+  .about-block h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #020617;
+    border-left: 5px solid #38bdf8;
+    padding-left: 14px;
+  }
+  
+  .about-block p {
+    font-size: 15.5px;
+    color: #374151;
+    line-height: 1.8;
+  }
+  
+  /* ================================
+     LIST STYLE (CHECK ICONS)
+  ================================ */
+  .about-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .about-block ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15.5px;
+    color: #374151;
+  }
+  
+  .about-block ul li::before {
+    content: "✔";
+    color: #22c55e;
+    font-weight: 700;
+    margin-right: 12px;
+  }
+  
+  /* ================================
+     CTA SECTION
+  ================================ */
+  .about-cta {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 22px;
+    margin-top: 70px;
+  }
+  
+  .about-cta h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  
+  .about-cta p {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 22px;
+  }
+  
+  .about-cta a {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #25d366;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .about-cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+  }
+  
+  /* ================================
+     MOBILE RESPONSIVE
+  ================================ */
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 30px;
+    }
+  
+    .about-hero p {
+      font-size: 16px;
+    }
+  
+    .about-block {
+      padding: 26px;
+    }
+  
+    .about-cta h3 {
+      font-size: 22px;
+    }
+  }
+  
