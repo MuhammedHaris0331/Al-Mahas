@@ -1,173 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | Al Mahas General Trading</title>
 
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/product.css">
+  <title>Products | AL MAHAS</title>
+
   <link rel="shortcut icon" href="assets/img/Mainlogo.png" type="image/x-icon">
+  <link rel="icon" href="assets/Uploads/img/favicon /favicon.ico">
+  <link rel="shortcut icon" href="assets/Uploads/img/favicon /favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/Uploads/img/favicon /favicon-96x96.png">
+  <link rel="apple-touch-icon" href="assets/Uploads/img/favicon /apple-touch-icon.">
+  <link rel="manifest" href="assets/Uploads/img/favicon /web-app-manifest-192x192.png">
+  <meta name="apple-mobile-web-app-title" content="AL MAHAS">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:sans-serif;
+      background:#020817;
+      color:white;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo img{
+      width:45px;
+    }
+
+    .logo h2{
+      font-size:22px;
+      letter-spacing: 1px;
+      margin: 0;
+      color:white;
+      font-weight:700;
+    }
+
+    .navbar nav ul{
+      display:flex;
+      align-items:center;
+      gap:30px;
+      list-style:none;
+    }
+
+    .navbar nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-size:17px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .navbar nav ul li a:hover,
+    .navbar nav ul li a.active{
+      color:#38bdf8;
+    }
+
+    /* HERO */
+
+    .products-hero{
+      height:340px;
+      background: linear-gradient(rgba(2, 6, 23, 0.82), rgb(31 98 169 / 82%)), url(images/blue-bg.jpg);
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      text-align:center;
+    }
+
+    .products-hero-content{
+      margin-top:70px;
+    }
+
+    .products-hero-content h1{
+      font-size:72px;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .products-hero-content p{
+      color:#d1d5db;
+      font-size:18px;
+    }
+
+    .products-line{
+      width:70px;
+      height:4px;
+      background:#38bdf8;
+      margin:18px auto 0;
+      border-radius:20px;
+    }
+
+    /* PAGE */
+
+    .products-page{
+      padding:90px 8%;
+      background:linear-gradient(to right,#020617,#071a3a);
+    }
+
+    .product-section{
+      margin-bottom:100px;
+    }
+
+    .section-title{
+      font-size:52px;
+      margin-bottom:45px;
+      color:white;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:32px;
+    }
+
+    /* CARD */
+
+    .product-card{
+      background:#0f172a;
+      border-radius:28px;
+      overflow:hidden;
+
+      border:1px solid rgba(255,255,255,0.06);
+
+      transition:0.4s ease;
+    }
+
+    .product-card:hover{
+      transform:translateY(-8px);
+
+      box-shadow:
+      0 0 35px rgba(56,189,248,0.15);
+    }
+
+    .product-card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+
+      transition:0.4s;
+    }
+
+    .product-card:hover img{
+      transform:scale(1.05);
+    }
+
+    .product-info{
+      padding:24px;
+    }
+
+    .product-info h3{
+      color:white;
+      font-size:26px;
+      margin-bottom:10px;
+    }
+
+    .product-category{
+      color:#38bdf8;
+      font-size:15px;
+    }
+
+    /* CTA */
+
+    .products-cta{
+      margin-top:45px;
+      text-align:center;
+    }
+
+    .products-cta a{
+      display:inline-block;
+
+      background:linear-gradient(
+        135deg,
+        #38bdf8,
+        #0ea5e9
+      );
+
+      color:white;
+      text-decoration:none;
+
+      padding:16px 34px;
+
+      border-radius:50px;
+
+      font-weight:600;
+
+      transition:0.3s;
+    }
+
+    .products-cta a:hover{
+      transform:translateY(-3px);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:1100px){
+
+      .product-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+    }
+
+    @media(max-width:700px){
+
+      .product-grid{
+        grid-template-columns:1fr;
+      }
+
+      .products-hero-content h1{
+        font-size:48px;
+      }
+
+      .section-title{
+        font-size:38px;
+      }
+
+      .logo h2{
+        font-size:28px;
+      }
+
+      .navbar{
+        padding:18px 5%;
+      }
+
+      .navbar nav ul{
+        gap:16px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+  <div class="logo">
+    <img
+          src="assets/Uploads/img/logo-am.png"
+          alt="AL MAHAS"
+          class="logo-img"
+        />
+    <h2>AL MAHAS</h2>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="active" href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="products-hero">
+
+  <div class="products-hero-content">
+
+    <h1>Our Products</h1>
+    <div class="products-line"></div>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
 <main class="products-page">
 
-  <!-- ================= SOFT DRINKS ================= -->
-  <section class="products">
-    <div class="container">
+  <!-- BEVERAGES -->
 
-      <h1 class="products-title">Our Products</h1>
-      <p class="products-subtitle">Your Trusted Source for FMCG Products</p>
+  <section class="product-section">
 
-      <div class="product-grid">
+    <h2 class="section-title">Beverages</h2>
 
-        <div class="product-card">
-          <img src="assets/img/Products-page/ChatGPT Image Jan 6, 2026, 01_44_37 AM.webp" alt="Mountain Dew">
-          <h3>Mountain Dew</h3>
-          <p class="product-category">Soft Drink</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Mountain%20Dew">
-            Order on WhatsApp
-          </a>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/vimto-massas-img.png" alt="">
+        <div class="product-info">
+          <h3>Vimto Massas</h3>
+          <p class="product-category">Mixed Fruit Drink</p>
         </div>
+      </div>
 
-        <div class="product-card">
-          <img src="assets/img/Products-page/Redbull Img.png" alt="Red Bull">
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/rani can-img.png" alt="">
+        <div class="product-info">
+          <h3>Rani Float</h3>
+          <p class="product-category">Juice Drink</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/barbican-large.png" alt="">
+        <div class="product-info">
+          <h3>Barbican</h3>
+          <p class="product-category">Malt Beverage</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/Redbull Img.png" alt="">
+        <div class="product-info">
           <h3>Red Bull</h3>
           <p class="product-category">Energy Drink</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Red%20Bull">
-            Order on WhatsApp
-          </a>
         </div>
-
-        <div class="product-card">
-          <img src="assets/img/Products-page/Pepsi Img.png" alt="Pepsi">
-          <h3>Pepsi</h3>
-          <p class="product-category">Soft Drink</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Pepsi">
-            Order on WhatsApp
-          </a>
-        </div>
-
-        <div class="product-card">
-          <img src="assets/img/Products-page/7up Img.png" alt="7up">
-          <h3>7up</h3>
-          <p class="product-category">Soft Drink</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%207up">
-            Order on WhatsApp
-          </a>
-        </div>
-
       </div>
+
     </div>
+
+    <div class="products-cta">
+      <a href="https://wa.me/971542948710">
+        Request Beverage Price List
+      </a>
+    </div>
+
   </section>
 
-  <!-- ================= COOKIES ================= -->
-  <section class="products" id="cookies">
-    <div class="container">
+  <!-- SNACKS -->
 
-      <h2 class="products-title">Cookies</h2>
+  <section class="product-section">
 
-      <div class="product-grid">
+    <h2 class="section-title">Snacks & Biscuits</h2>
 
-        <div class="product-card">
-          <img src="assets/img/Products-page/Parle G Img.png" alt="Parle G">
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/locker chocolate.png" alt="">
+        <div class="product-info">
+          <h3>Loacker</h3>
+          <p class="product-category">Chocolate Wafer</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/Parle G Img.png" alt="">
+        <div class="product-info">
           <h3>Parle G</h3>
           <p class="product-category">Biscuit</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Parle%20G">
-            Order on WhatsApp
-          </a>
         </div>
-
-        <div class="product-card">
-          <img src="assets/img/Products-page/Monaco.png" alt="Monaco Biscuit">
-          <h3>Monaco</h3>
-          <p class="product-category">Biscuit</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Monaco">
-            Order on WhatsApp
-          </a>
-        </div>
-        <div class="product-card">
-          <img src="assets/img/Products-page/ChatGPT Image Jan 6, 2026, 03_18_28 AM.png" alt="Monaco Biscuit">
-          <h3>Hide&seek</h3>
-          <p class="product-category">Biscuit</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Monaco">
-            Order on WhatsApp
-          </a>
-        </div>
-
-        <div class="product-card">
-          <img src="assets/img/Products-page/Kark Jack Img.png" alt="Krack Jack">
-          <h3>Krack Jack</h3>
-          <p class="product-category">Biscuit</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Krack%20Jack">
-            Order on WhatsApp
-          </a>
-        </div>
-
       </div>
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/Monaco.png" alt="">
+        <div class="product-info">
+          <h3>Monaco</h3>
+          <p class="product-category">Cracker Biscuit</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/Hide and Seek.jpeg" alt="">
+        <div class="product-info">
+          <h3>Hide & Seek</h3>
+          <p class="product-category">Chocolate Biscuit</p>
+        </div>
+      </div>
+
     </div>
+
+    <div class="products-cta">
+      <a href="https://wa.me/971586049623">
+        Request Snacks Price List
+      </a>
+    </div>
+
   </section>
 
-  <!-- ================= HOUSE HOLDING ================= -->
-  <section class="products" id="house-holding">
-    <div class="container">
+  <!-- FOOD PRODUCTS -->
 
-      <h2 class="products-title">House Holding</h2>
+  <section class="product-section">
 
-      <div class="product-grid">
+    <h2 class="section-title">Food Products</h2>
 
-        <div class="product-card">
-          <img src="assets/img/Products-page/Fairy.png" alt="Fairy">
-          <h3>Fairy</h3>
-          <p class="product-category">House Holding</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Fairy">
-            Order on WhatsApp
-          </a>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/nallara rice.png" alt="">
+        <div class="product-info">
+          <h3>Nellara Rice</h3>
+          <p class="product-category">Premium Rice</p>
         </div>
-
-        <div class="product-card">
-          <img src="assets/img/Products-page/Tide.png" alt="Tide">
-          <h3>Tide</h3>
-          <p class="product-category">House Holding</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Tide">
-            Order on WhatsApp
-          </a>
-        </div>
-
-        <div class="product-card">
-          <img src="assets/img/Products-page/Ariel.png" alt="Ariel">
-          <h3>Ariel</h3>
-          <p class="product-category">House Holding</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Ariel">
-            Order on WhatsApp
-          </a>
-        </div>
-
-        <div class="product-card">
-          <img src="assets/img/Products-page/Dettol.png" alt="Dettol">
-          <h3>Dettol</h3>
-          <p class="product-category">House Holding</p>
-          <a class="btn-order" target="_blank"
-             href="https://wa.me/971542948710?text=I%20want%20to%20order%20Dettol">
-            Order on WhatsApp
-          </a>
-        </div>
-
       </div>
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/Lipton Tea Bag small.jpeg" alt="">
+        <div class="product-info">
+          <h3>Lipton Tea</h3>
+          <p class="product-category">Tea Product</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/Nescafe .jpeg" alt="">
+        <div class="product-info">
+          <h3>Nescafe</h3>
+          <p class="product-category">Nescafe Orginal</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/Uploads/img/Products-page/Nescafe gold.jpeg" alt="">
+        <div class="product-info">
+          <h3>Nescafe</h3>
+          <p class="product-category">Nescafe Gold</p>
+        </div>
+      </div>
+
     </div>
+
+    <div class="products-cta">
+      <a href="https://wa.me/971542948710">
+        Contact for Wholesale Supply
+      </a>
+    </div>
+
   </section>
 
 </main>

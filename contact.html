@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | AL MAHAS</title>
+    <link rel="icon" href="assets/Uploads/img/favicon /favicon.ico" />
+    <link rel="shortcut icon" href="assets/Uploads/img/favicon /favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/Uploads/img/favicon /favicon-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/Uploads/img/favicon /apple-touch-icon."
+    />
+    <link
+      rel="manifest"
+      href="assets/Uploads/img/favicon /web-app-manifest-192x192.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="AL MAHAS" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #020817;
+        color: white;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 22px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+
+        backdrop-filter: blur(12px);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .logo img {
+        width: 45px;
+      }
+
+      .logo h2 {
+        font-size: 22px;
+        color: white;
+        margin: 0;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
+
+      .navbar nav ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+      }
+
+      .navbar nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .navbar nav ul li a:hover,
+      .navbar nav ul li a.active {
+        color: #38bdf8;
+      }
+
+      /* HERO */
+
+      .contact-hero {
+        height: 340px;
+
+        background: linear-gradient(rgba(2, 6, 23, 0.82), rgb(31 98 169 / 82%)), url(images/blue-bg.jpg);
+
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+      }
+
+      .contact-hero-content {
+        margin-top: 70px;
+      }
+
+      .contact-hero-content h1 {
+        font-size: 72px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .contact-hero-content p {
+        color: #d1d5db;
+        font-size: 18px;
+      }
+
+      .contact-line {
+        width: 70px;
+        height: 4px;
+        background: rgb(0, 140, 255);
+        margin: 18px auto 0;
+        border-radius: 20px;
+      }
+
+      /* CONTACT SECTION */
+
+      .contact-page {
+        padding: 80px 8%;
+        background: linear-gradient(to right, #020617, #071a3a);
+      }
+
+      .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .contact-info,
+      .contact-form {
+        background: #0f172a;
+        padding: 45px;
+        border-radius: 28px;
+      }
+
+      /* LEFT */
+
+      .contact-info h3 {
+        font-size: 40px;
+        margin-bottom: 35px;
+      }
+
+      .info-box {
+        margin-bottom: 28px;
+      }
+
+      .info-box h4 {
+        color: #38bdf8;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .info-box p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        font-size: 18px;
+      }
+
+      .whatsapp-btn {
+        display: inline-block;
+        margin-top: 20px;
+        background: #22c55e;
+        color: white;
+        text-decoration: none;
+        padding: 16px 34px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .whatsapp-btn:hover {
+        transform: translateY(-3px);
+      }
+
+      /* RIGHT */
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        background: #020617;
+        border: 1px solid #1e293b;
+        padding: 18px;
+        margin-bottom: 22px;
+        border-radius: 16px;
+        color: white;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .contact-form textarea {
+        height: 190px;
+        resize: none;
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 18px;
+        border: none;
+        border-radius: 16px;
+
+        background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+
+        transition: 0.3s;
+      }
+
+      .contact-form button:hover {
+        transform: translateY(-3px);
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 900px) {
+        .contact-wrapper {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-hero-content h1 {
+          font-size: 48px;
+        }
+
+        .logo h2 {
+          font-size: 28px;
+        }
+
+        .navbar {
+          padding: 18px 5%;
+        }
+
+        .navbar nav ul {
+          gap: 16px;
+        }
+      }
+      .map-box {
+        width: 100%;
+        margin-top: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .map-box iframe {
+        width: 100%;
+        height: 260px;
+        border: 0;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+      <div class="logo">
+        <img
+          src="assets/Uploads/img/logo-am.png"
+          alt="AL MAHAS"
+          class="logo-img"
+        />
+        <h2>AL MAHAS</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="contact-hero">
+      <div class="contact-hero-content">
+        <h1>Contact Us</h1>
+
+        <div class="contact-line"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact-page">
+      <div class="contact-wrapper">
+        <!-- LEFT -->
+
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+
+          <div class="info-box">
+            <h4>Address</h4>
+            <p>Mussafah M40, Abu Dhabi, UAE</p>
+          </div>
+
+          <div class="info-box">
+            <h4>Phone</h4>
+            <p>+971 58 604 9623</p>
+          </div>
+
+          <div class="info-box">
+            <h4>Email</h4>
+            <p>info@almahasgeneraltradingllc.com</p>
+          </div>
+
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps?q=Mussafah%20M40%20Abu%20Dhabi&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
+            <input type="text" name="subject" placeholder="Subject" required />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+
+            <p id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        const statusMsg = document.getElementById("form-status");
+
+        if (!form || !statusMsg) return;
+
+        let isSubmitting = false;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (isSubmitting) return;
+
+          isSubmitting = true;
+
+          statusMsg.textContent = "Sending...";
+          statusMsg.style.color = "#94a3b8";
+
+          const formData = new FormData(form);
+
+          fetch(
+            "https://script.google.com/macros/s/AKfycbzuGkHb-ofVKt-otWsK-j4933FK4pWrGGwNLtq6wxJ2OqCVsgiT_BMRdHH61cI9tnwM/exec",
+            {
+              method: "POST",
+              body: formData,
+            }
+          )
+            .then((res) => res.text())
+
+            .then(() => {
+              statusMsg.textContent = "✅ Message sent successfully!";
+              statusMsg.style.color = "#22c55e";
+
+              form.reset();
+            })
+
+            .catch(() => {
+              statusMsg.textContent = "❌ Failed to send. Try again.";
+              statusMsg.style.color = "red";
+            })
+
+            .finally(() => {
+              isSubmitting = false;
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
